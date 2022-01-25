@@ -1,123 +1,28 @@
-html {
-  scroll-behavior: smooth;
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
+
+
+body{
+  background: #57467b;
+  font-family: 'Montserrat';
+  margin: 0px;
+}
+.wrapper{
+  margin: 10px;
 }
 
-body {
-    margin: 0%;
-    background: #121212;
-}
-
-a {
-    color: #b3b3b3;
+.navbarContainer {
+    overflow: hidden;
     background-color: #121212;
-}
-
-.Navbar a{
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.Navbar {
-    overflow: hidden; 
-    background-color: #121212;
-    position: fixed; 
-    top: 0; 
-    width: 100%; 
+    position: fixed;
+    top: 0;
+    width: 100%;
     z-index: 1;
 }
 
-/* Navbar links */
-.Navbar #nav1 {
-    float: left; 
-    display: block; 
-    color: white; 
-    padding: 14px 16px; 
-    text-decoration: none; 
-    /* font-family: Avant Garde, Helvetica;  */
-    font-size: 20px; 
-    text-align: center; 
-    position: relative; 
-    -webkit-animation: moveNavText 0.75s; 
-    animation: moveNavText 0.75s; 
-}
-
-.Navbar #nav2 {
-    float: left; 
-    display: block; 
-    color: white; 
-    padding: 14px 16px; 
-    text-decoration: none; 
-    /* font-family: Avant Garde, Helvetica;  */
-    font-size: 20px; 
-    text-align: center; 
-    position: relative; 
-    -webkit-animation: moveNavText 0.90s; 
-    animation: moveNavText 0.90s; 
-}
-
-.Navbar #nav3 {
-    float: left; 
-    display: block; 
-    color: white; 
-    padding: 14px 16px; 
-    text-decoration: none; 
-    /* font-family: Avant Garde, Helvetica;  */
-    font-size: 20px; 
-    text-align: center; 
-    position: relative; 
-    -webkit-animation: moveNavText 1.05s; 
-    animation: moveNavText 1.05s; 
-}
-
-.Navbar #nav4 {
-    float: left; 
-    display: block; 
-    color: white; 
-    padding: 14px 16px; 
-    text-decoration: none; 
-    /* font-family: Avant Garde, Helvetica;  */
-    font-size: 20px; 
-    text-align: center; 
-    position: relative; 
-    -webkit-animation: moveNavText 1.2s; 
-    animation: moveNavText 1.2s; 
-    cursor: pointer;
-}
-
-
-
-
-@keyframes moveNavText {
-    from {top: -3vw;} 
-    to {top: 0vw;} 
-}
-
-
-@media screen and (max-width: 576px) {
-    .Navbar a{
-        width: 25%; 
-        font-size: 12px;
-    }
-}
-
-
-.Navbar a:hover {
-    background-color: #b3b3b3;
-    color: black;
-    font-weight: bold;
-}
-
-
-.Navbar a.active { 
-    background-color: darkgray;
-}
-
-* { 
-    box-sizing: border-box;
-} 
-
-
 .home {
-    background: #121212 url(../images/topbg.jpg) no-repeat 50% 50%;
+    background: #121212 url(../images/absBG.png) no-repeat 50% 50%;
+    background-position: center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -125,530 +30,65 @@ a {
     background-size: cover;
     width: 100%;
     display: block;
-    height: auto;
-    padding-top: 350px;
-    padding-bottom: 500px;
+    height: 100%;
+    padding-bottom: 10.1em;
     color: #fff;
 }
 
 
-
-.General {
-    background: #121212;
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    min-height: 1px;
-    padding: 1.5rem;
-    display: flex;
-    margin: auto;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 600;
-    justify-content: space-evenly;
-
+.introButton {
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #f5edf0;
+    margin: 1em 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family: 'Monsterrat', sans-serif;
+    font-size: 20px;
+    font-weight:300;
+    background-color: rgba(0,0,0,0);
+    color: #f5edf0;
+    text-align:center;
+    border-radius: 12px;
+    transition: all 0.2s;
 }
 
-.Container {
-    background: rgba(0,0,0,0.6);
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    min-height: 1px;
-    padding: 1.5rem;
-    display: block;
-    margin:auto;
-    width:fit-content;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 600;
-    border-radius: 5rem;
-    animation-duration: 1s;
-    animation-name: slidein;
+.introButton:hover {
+    color: #000500;
+    background-color:#f5edf0
 }
 
-
-@media only screen and (max-width: 825px) {
-    .General {
-        display:inline-block;
-        margin-left: auto;
-        margin-right: auto;
+@media all and (max-width:30em){
+    .introButton {
+        display:block;
+        margin:0.4em auto;
     }
 }
 
 
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    background: #404040;
-    transition: 0.3s;
-    margin-top: 2.5%;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-    display: inline-block;
-    width: 25rem;
-    height: fit-content;
-    max-height: 40rem;
-    min-height: 35rem;
-    color: #FFFFFF;
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 3rem;
-    overflow: hidden;
-    object-fit: cover;
-    zoom: 1;
-
+.introContainer {
+    padding: 20em 15em;
 }
 
-
-
-
-.cardTop {
-    text-align: center;
-    display: inline;
-    font-weight: 700;
-    font-family: 'Courier New', Courier, monospace;
+.introName {
+    margin: 0 0 0 0;
+    font-size: 2em;
 }
 
-.cardBottom {
-    margin: 1rem;
-    margin-bottom: 2rem;
-    font-weight: 400;
-    font-family: 'Courier New', Courier, monospace;
+.introDetails {
+    margin: 0 0 0 0;
+    font-size: 2em;
 }
 
-.cardBottom a {
-    background-color: #404040;
-}
-
-.cardImage {
-    height: 20rem;
-    width: 100%;
-    margin-bottom: 1rem;
-    object-fit: cover;
-}
-
-.inverted {
-    filter:invert(85%);
-}
-
-.filtered {
-    filter: invert(15%);
-    width: 102%;
-    margin-left: -1%;
-}
-
-
-
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-/* Add some padding inside the card container */
-.container {
-  padding: 2px 16px;
-}
-
-
-.contact {
-    background: #121212 url(../images/bottombg.jpg) no-repeat 50% 50%;
-    background-attachment: fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    width: 100%;
-    display: block;
-    height: auto;
-    padding-top: 150px;
-    padding-bottom: 110px;
-    color: #fff;
-}
-
-.res-title{
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.reservation {
-    width: 60%;
+.box-inner{
+    width: 400px;
     padding: 10px;
-    border-radius: 8px;
-    margin: 0px auto;
-    background-color: rgba(0,0,0, 0.65);
-    box-shadow: -1px -1px 1px 0 rgba(0,0,0, 0.2), 1px 2px 10px 0 rgba(0,0,0, 0.5);
+    border: 1px solid #a29415;
 }
 
-.reservation h2 {
-    width: 70%;
-    text-align: center;
-    margin: 0 auto;
-    color: white;
-    font-weight: 500;
-    font-size: 1.3em;
-    letter-spacing: 0pt;
-    word-spacing: 0pt;
-}
-
-.reservation h2 span {
-    width: 70%;
-    text-align: center;
-    margin: 0 auto;
-    color: white;
-    font-weight: 900;
-    font-size: 1.5em;
-    font-variant: small-caps;
-    letter-spacing: .4pt;
-    word-spacing: .3pt;
-}
-
-.reservation p {
-    color: white;
-    width: 50%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-@media only screen and (max-width: 825px) {
-  .reservation {
-    width: 100%;
-  }
-  form {
-      width: 100%;
-  }
-}
-
-.reservation form {
-    font-size: 15px;
-    outline: none;
-    font-weight: 600;
-    color: #8d8e8f;
-    /* padding: 12px 12px; */
-    width: 80%;
-    border: 1px solid #808080;
-    margin: 2% auto;
-    border-radius: 7px;
-    /* background: rgba(227, 222, 222); */
-    box-shadow: 2px 3px 3px 0px rgba(0,0,0, 0.3);
-    font-family: "Raleway", sans-serif;
-}
-
-.reservation input[type="text"] {
-    font-size: 15px;
-    outline: none;
-    font-weight: 800;
-    color: #8d8e8f;
-    padding: 2% 1% 2% 7%;
-    width: 90%;
-    border:1px solid black;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    border-radius: 7px;
-    background: #181818;
-    box-shadow: inset 0px 3px 0px 0px rgba(5,5,5, 0.15);
-    font-family: 'Raleway', sans-serif;
-}
-
-.reservation input[type="email"] {
-    font-size: 15px;
-    outline: none;
-    font-weight: 800;
-    color: #8d8e8f;
-    padding: 2% 1% 2% 7%;
-    width: 90%;
-    border:1px solid black;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    border-radius: 7px;
-    background: #181818;
-    box-shadow: inset 0px 3px 0px 0px rgba(5,5,5, 0.15);
-    font-family: 'Raleway', sans-serif;
-}
-
-
-.message {
-    display: block;
-    resize: none;
-    font-size: 15px;
-    outline: none;
-    font-weight: 800;
-    color: #8d8e8f;
-    padding: 0% 0% 49% 1%;
-    width: 90%;
-    border:1px solid black;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1em;
-    border-radius: 7px;
-    background: #181818;
-    box-shadow: inset 0px 3px 0px 0px rgba(5,5,5, 0.15);
-    font-family: 'Raleway', sans-serif;
-    height: 20rem;
-    word-break:break-all;
-    overflow: hidden;
-}
-
-
-.reservation input[type="text"]:hover {
-    box-shadow: 0 0 18px rgba(0, 0, 10, 0.8);
-}
-
-.form-spacer {
-    padding: 30px 30px;
-}
-
-
-.submit input[type="submit"] {
-    display: block;
-    color: rgb(225, 225, 225);
-    cursor: pointer;
-    border: none;
-    font-weight: 900;
-    outline: none;
-    text-align: center;
-    font-family: 'Raleway', sans-serif;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    padding: 7px 0px;
-    width: 90%;
-    font-size: 18px;
-    transition: border-color 0.9s color 0.9s background-color 0.9s;
-    border-radius: 7px;
-    background-color: #121212;
-    box-shadow: 1px 1px 4px 0 rgba(0,0,0,0.3);
-}
-
-.submit input[type="submit"]:hover {
-    color: #000;
-    background-color: #282828;
-    box-shadow: inset 1px 2px 15px 0 rgba(0,0,0, 0.5);
-}
-
-.footer-container {
-    text-align: center;
-    margin-top: auto;
-}
-
-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #121212;
-    color: #404044;
-    text-align: center;
-    border-top: 3px solid rgb(22, 22, 22);
-    z-index: 5;
-}
-
-#openContactForm {
-    position: fixed;
-    bottom: 1.15vw;
-    right: 1.75vw;
-    width: 20vw;
-    height: 3vw;
-    background-color: #121212;
-    color: #d8d7d7;
-    border: solid white 1px;
-    cursor: pointer;
-    -webkit-animation: movePopup 5s;
-    animation: movePopup 5s;
-    transition-duration: 0.5s;
-    -webkit-transition-duration: 0.5s;
-    z-index: 6;
-    border-radius: 25rem;
-}
-
-#openContactForm:hover {
-    color: black;
-    background-color: white;
-    /* transition-duration: 1s; */
-    
-    border-color: silver;
-}
-
-#contactButtonText {
-    font-family:'Courier New', Courier, monospace;
-}
-
-.form-popup {
-    display: none;
-    position: fixed;
-    border: 3px solid #f1f1f1;
-    z-index: 10;
-    min-width: 35rem;
-    background-color: #202020;
-    bottom: 1rem;
-    right: 1rem;
-    border-radius: 10px;
-}
-
-#popup-container {
-    margin: auto;
-    display: flex;
-    height: 5rem;
-    justify-content: center;
-}
-
-.form-container h2, label {
-    color: #c0c0c0;
-    font-family:'Courier New', Courier, monospace;
-    margin: 1px;
-    margin-left: 5px;
-    text-align: left;
-}
-
-.form-container h3{
-    color: #c0c0c0;
-    font-family:'Courier New', Courier, monospace;
-    margin: 5px;
-}
-
-.form-container h1{
-    color: #c0c0c0;
-    font-family:'Courier New', Courier, monospace;
-    margin: 5px;
-}
-
-.form-container input[type=text] {
-  width: 95%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
-}
-
-.form-container .btn {
-    background-color: #121212;
-    color: #d8d7d7;
-    border: solid white 1px;
-    padding: 16px 20px;
-    /* border: none; */
-    cursor: pointer;
-    width: 95%;
-    margin-bottom:10px;
-    opacity: 0.8;
-    border-radius: 8px;
-    transition-duration: 0.3s;
-    -webkit-transition-duration: 0.3s;
-}
-
-.btn:hover {
-    color: black;
-    background-color: white;
-
-    /* transition-duration: 1s; */
-    
-    border-color: silver;
-}
-
-.form-container {
-    text-align: center;
-}
-
-
-.slideshow-container {
-  width: 1000px;
-  height: 600px;
-  position: relative;
-  margin: 0 auto;
-  /* margin-top: 5rem; */
-  background: white;
-  overflow: hidden;
-
-}
-
-/* Hide the images by default */
-.mySlides {
-    /* display: none; */
-    text-align: center;
-    /* left: 50%; */
-    /* margin-left: -200px; */
-    /* position: absolute; */
-    object-fit: cover;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+.box{
+    float:right;
+    margin-top: -25em;
+    opacity: 0;
 }
